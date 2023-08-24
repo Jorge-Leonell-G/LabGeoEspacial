@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./CSS/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="shortcut icon" type="image/png" href="./IMG/logo2.png">
+    <link rel="stylesheet" href="./CSS/rain.css">
     <title>Proyectos | PIIG LAB</title>
 </head>
 <body>
@@ -57,10 +58,16 @@
         </div>
 
     </header>
+    <br>
         <div class="grid-layout">
-            <div class="c1">
-                
+            <div class="c1"></div>
+
+        <!--Inicio del div para la animacion de lluvia-->
+        <div class="global-container">
+            <div class="rain-container">
+                <div class="cloud"></div>
             </div>
+            <br><br><br><br><br><br><br><br><br><br>
             <div class="c2">
                 
                 <p>
@@ -105,6 +112,35 @@
                 </p>
             
             </div>
+        </div>
+        <script>
+            function randomText(){
+                var text = ("abcdefghijklmnopqrstuvwxyz");
+                letter = text[Math.floor(Math.random() * text.length)];
+                return letter;
+            }
+
+            function rain(){
+                let cloud = document.querySelector('.cloud');
+                let e = document.createElement('div');
+                let left = Math.floor(Math.random() * 320);
+                let size = Math.random() * 1.5;
+                e.classList.add('text');
+                cloud.appendChild(e);
+                e.innerText = randomText()
+                e.style.left = left + 'px';
+                e.style.fontSize = 0.5+size+'em';
+
+                setTimeout(function(){
+                    cloud.removeChild(e)
+                },2000)
+            }
+
+            setInterval(function(){
+                rain()
+            },20);
+        </script>
+
             <div class="c3">
                 
             </div>

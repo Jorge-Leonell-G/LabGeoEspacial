@@ -1,0 +1,70 @@
+
+.global-container
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.rain-container
+{
+    position: absolute;
+    height: 200px;
+    width: 100px;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid rgba(red, green, blue, 0.1);
+    background: #fff;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, 
+    transparent, transparent, #0005);
+}
+
+.cloud
+{
+    position: absolute;
+    width: 320px;
+    height: 100px;
+    background: #fff;
+    border-radius: 100px;
+    z-index: 100;
+    filter: drop-shadow(0 0 35px #0adceb);
+}
+
+.cloud::before
+{
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: 40px;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 90px 0 0 30px #fff;
+}
+
+.text
+{
+    position: absolute;
+    height: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #000;
+    text-shadow: 0 0 5px #fff,
+    0 0 15px #fff,
+    0 0 30px #fff;
+    transform-origin: bottom;
+}
+
+/*
+.container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+*/
