@@ -1,3 +1,12 @@
+.body-loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #fff;
+    overflow: hidden;
+}
+
 .loader
 {
     position: relative;
